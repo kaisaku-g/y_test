@@ -1,0 +1,10 @@
+---
+version: 2
+updates:
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: "node"
+        versions-pattern: "^(21|23|25)\\."  # 奇数メジャーバージョンは開発版なので無視する
